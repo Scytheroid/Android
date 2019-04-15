@@ -28,13 +28,15 @@ public class OurAdapter extends ArrayAdapter {
 
         //ziskame si reference na views v xml
         TextView title = rowView.findViewById(R.id.title);
-        TextView info = rowView.findViewById(R.id.info);
+        TextView type = rowView.findViewById(R.id.type);
         ImageView image = rowView.findViewById(R.id.image);
+        TextView rating = rowView.findViewById(R.id.rating);
 
         //nastavime do nich data z listu
         title.setText(animals.get(position).name);
-        info.setText(animals.get(position).info);
+        type.setText(animals.get(position).type);
         image.setImageResource(animals.get(position).image);
+        rating.setText(animals.get(position).rating);
 
         return rowView;
     }

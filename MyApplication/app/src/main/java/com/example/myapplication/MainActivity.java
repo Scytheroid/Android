@@ -20,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         animals = new ArrayList<>();
-        animals.add(new Animal(R.drawable.alligator,"Aligator","bla bla1"));
-        animals.add(new Animal(R.drawable.bear,"Bear","bla bla2"));
-        animals.add(new Animal(R.drawable.bug,"bug","bla bla3"));
-        animals.add(new Animal(R.drawable.butterfly,"buterfly","bla bla4"));
-        animals.add(new Animal(R.drawable.snail,"snail","bla bla5"));
+        animals.add(new Animal(R.drawable.alligator,"Aligator","A lot of Jaws", "100%"));
+        animals.add(new Animal(R.drawable.bear,"Bear","Quite dangerous to see", "13%"));
+        animals.add(new Animal(R.drawable.bug,"bug","Very spicy", "80%"));
+        animals.add(new Animal(R.drawable.butterfly,"buterfly","Super movie", "60%"));
+        animals.add(new Animal(R.drawable.snail,"snail","Pain to watch", "15%"));
 
         OurAdapter adapter = new OurAdapter(this, animals);
         ListView listView = findViewById(R.id.listView);

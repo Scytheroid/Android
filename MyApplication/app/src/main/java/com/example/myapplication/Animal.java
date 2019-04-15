@@ -6,18 +6,21 @@ import android.os.Parcelable;
 public class Animal implements Parcelable {
     public int image;
     public String name;
-    public String info;
+    public String type;
+    public String rating;
 
-    public Animal(int image, String name, String info) {
-        this.image = image;
-        this.name = name;
-        this.info = info;
+    public Animal(int image, String name, String type, String rating) {
+        this.image  = image;
+        this.name   = name;
+        this.type   = type;
+        this.rating = rating;
     }
 
     protected Animal(Parcel in) {
-        image = in.readInt();
-        name = in.readString();
-        info = in.readString();
+        image   = in.readInt();
+        name    = in.readString();
+        type    = in.readString();
+        rating  = in.readString();
     }
 
     public static final Creator<Animal> CREATOR = new Creator<Animal>() {
@@ -42,6 +45,7 @@ public class Animal implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(image);
         dest.writeString(name);
-        dest.writeString(info);
+        dest.writeString(type);
+        dest.writeString(rating);
     }
 }
